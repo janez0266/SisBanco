@@ -1,0 +1,55 @@
+#calendario	{
+	background-color: #dddeee;
+	border: 2px inset gray;
+	font-size: 7pt;
+	float: right;
+	margin: 0 0 .5cm .5cm;
+}
+
+#calendario_thead	{
+	background-color: blue;
+}
+
+#calendario_mes	{
+	margin: 0;
+	padding: 0;
+}
+
+#calendario th	{
+	padding: 0px;
+	margin: 0px;
+}
+
+#calendario td	{
+	text-align: center;
+}
+
+#calendario .dia	{
+	background-color: yellow;
+	border: 1px solid lime;
+	font-size: 9pt;
+}
+
+#calendario button	{
+	padding: 0 5px;
+	margin: 2px;
+	text-align: center;
+	font-size: 9pt;
+}
+
+#calendario button.flecha	{
+	font-size: 9pt;;
+	padding: 0 2px;
+}
+
+#calendario button.hoy	{
+	background-color: lime;
+}
+
+#calendario button.domingo	{
+	background-color: #ffc0cb;
+}
+
+#calendario button.normal	{
+	background-color: #eeeddd;
+}

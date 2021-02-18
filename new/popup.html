@@ -1,0 +1,49 @@
+<html>
+<head>
+
+<link	rel=stylesheet type="text/css" href="calendario.css">
+<style type="text/css">
+html, body, form	{
+	margin: 0;
+	padding: 0;
+}
+
+</style>
+<script type="text/javascript" src="calendario.js" ></script>
+<script type="text/javascript" >
+<!--
+var campoDestino;
+var formDestino;
+function leerDestino()	{
+	url = location.search.substr(1).split("=");
+	Destino = url[1].split(".");
+	formDestino = Destino[0];
+	campoDestino = Destino[1];
+}
+
+
+function seleccionaFecha(dd, mm, aa)	{
+	var volver = dd + "/" + mm + "/" + aa;
+	if (opener)	{
+		opener.document.forms[formDestino][campoDestino].value = volver;
+		window.close();
+	}
+	else	alert("año: " + aa + "\nmes: " + mm + "\ndia: " + dd);
+}
+
+window.onload = leerDestino;
+-->
+</script>
+</head>
+<!--body onload="leerDestino()"-->
+<body>
+<script type="text/javascript" >
+<!--
+_hoy = new Date();
+document.writeln(calendar(_hoy.getMonth(), _hoy.getFullYear(), "calendario", "seleccionaFecha"));
+//-->
+</script>
+
+</body>
+
+</html>

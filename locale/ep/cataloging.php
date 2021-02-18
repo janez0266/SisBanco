@@ -1,0 +1,249 @@
+<?php
+/* Este archivo es parte de un trabajo protegido por derechos de autor, Se distribuye SIN GARANTIA.
+ * Vea el archivo COPYRIGHT.html para más detalles.
+ * EspaBiblio Versión 2.0 Basado en OpenBiblio 0.6.0<br />
+ * Jorge Lara Cravero, Chile
+ */
+ 
+/**********************************************************************************
+ *   Instructions for translators:
+ *
+ *   All gettext key/value pairs are specified as follows:
+ *     $trans["key"] = "<php translation code to set the $text variable>";
+ *   Allowing translators the ability to execute php code withint the transFunc string
+ *   provides the maximum amount of flexibility to format the languange syntax.
+ *
+ *   Formatting rules:
+ *   - Resulting translation string must be stored in a variable called $text.
+ *   - Input arguments must be surrounded by % characters (i.e. %pageCount%).
+ *   - A backslash ('\') needs to be placed before any special php characters 
+ *     (such as $, ", etc.) within the php translation code.
+ *
+ *   Simple Example:
+ *     $trans["homeWelcome"]       = "\$text='Welcome to OpenBiblio';";
+ *
+ *   Example Containing Argument Substitution:
+ *     $trans["searchResult"]      = "\$text='page %page% of %pages%';";
+ *
+ *   Example Containing a PHP If Statment and Argument Substitution:
+ *     $trans["searchResult"]      = 
+ *       "if (%items% == 1) {
+ *         \$text = '%items% result';
+ *       } else {
+ *         \$text = '%items% results';
+ *       }";
+ *
+ **********************************************************************************
+ */
+
+#****************************************************************************
+#*  Common translation text shared among multiple pages
+#****************************************************************************
+$trans["catalogSubmit"]            = "\$text = 'Enviar';";
+$trans["catalogCancel"]            = "\$text = 'Cancelar';";
+$trans["catalogRefresh"]           = "\$text = 'Actualizar';";
+$trans["catalogDelete"]            = "\$text = 'Borrar';";
+$trans["catalogFootnote"]          = "\$text = 'Los campos marcados con %symbol% son requeridos.';";
+$trans["AnswerYes"]                = "\$text = 'Si';";
+$trans["AnswerNo"]                 = "\$text = 'No';";
+
+
+#****************************************************************************
+#*  Translation text for page index.php
+#****************************************************************************
+$trans["indexHdr"]                 = "\$text = 'Catalogación';";
+$trans["indexBarcodeHdr"]          = "\$text = 'Buscar bibliografía por código de barras';";
+$trans["indexBarcodeField"]        = "\$text = 'Código de barras';";
+$trans["indexSearchHdr"]           = "\$text = 'Buscar bibliografía por frase de búsqueda';";
+$trans["indexTitle"]               = "\$text = 'Título';";
+$trans["indexAuthor"]              = "\$text = 'Autor';";
+$trans["indexSubject"]             = "\$text = 'Resumen';";
+$trans["indexButton"]              = "\$text = 'Buscar';";
+#****************************************************************************
+#*  Translation text for page biblio_fields.php
+#****************************************************************************
+$trans["biblioFieldsLabel"]        = "\$text = 'Bibliografía';";
+$trans["biblioFieldsMaterialTyp"]  = "\$text = 'Tipo de material';";
+$trans["biblioFieldsCollection"]   = "\$text = 'Nivel de Precios de Alquiler';";
+$trans["biblioFieldsCallNmbr"]     = "\$text = 'Signatura:';";
+$trans["biblioFieldsUsmarcFields"] = "\$text = 'Campos USMarc';";
+$trans["biblioFieldsOpacFlg"]      = "\$text = 'Mostrar en OPAC';";
+
+#****************************************************************************
+#*  Translation text for page biblio_new.php
+#****************************************************************************
+$trans["biblioNewFormLabel"]       = "\$text = 'Añadir nuevo';";
+$trans["biblioNewSuccess"]         = "\$text = 'La siguiente bibliografía nueva (Copia) ha sido creada.  Para añadir una copia, seleccione \"Nueva copia\" a la izquierda o \"añadir nueva copia\" en la información de mas abajo.';";
+
+#****************************************************************************
+#*  Translation text for page biblio_edit.php
+#****************************************************************************
+
+$trans["biblioEditSuccess"]        = "\$text = 'Datos de libro (item) actualizados correctamente.';";
+
+
+#****************************************************************************
+#*  Translation text for page biblio_copy_new_form.php and biblio_copy_edit_form.php
+#****************************************************************************
+$trans["biblioCopyNewFormLabel"]   = "\$text = 'Añadir nueva copia';";
+$trans["biblioCopyNewBarcode"]     = "\$text = 'Código de barras';";
+$trans["biblioCopyNewDesc"]        = "\$text = 'Descripción';";
+$trans["biblioCopyNewAuto"]        = "\$text = 'Auto generar';";
+$trans["biblioCopyEditFormLabel"]  = "\$text = 'Editar copia';";
+$trans["biblioCopyEditFormStatus"] = "\$text = 'Estado';";
+#****************************************************************************
+#*  Translation text for page biblio_copy_new.php
+#****************************************************************************
+$trans["biblioCopyNewSuccess"]     = "\$text = 'Copia creada correctamente.';";
+
+#****************************************************************************
+#*  Translation text for page biblio_copy_edit.php
+#****************************************************************************
+$trans["biblioCopyEditSuccess"]    = "\$text = 'Copia actualizada correctamente.';";
+
+#****************************************************************************
+#*  Translation text for page biblio_copy_del_confirm.php
+#****************************************************************************
+$trans["biblioCopyDelConfirmErr1"] = "\$text = 'No se pudo borrar la copia.  La copia debe estar registrada antes de que pueda ser borrada.';";
+$trans["biblioCopyDelConfirmMsg"]  = "\$text = 'Estás seguro de que quieres borrar la copia con el código de barras %barcodeNmbr%?  Esto también borrará todos los cambios en el estado del historial de esta copia.';";
+
+#****************************************************************************
+#*  Translation text for page biblio_copy_del.php
+#****************************************************************************
+$trans["biblioCopyDelSuccess"]     = "\$text = 'Copia con código de barras %barcode% borrada correctamente.';";
+
+#****************************************************************************
+#*  Translation text for page biblio_marc_list.php
+#****************************************************************************
+$trans["biblioMarcListMarcSelect"] = "\$text = 'Añadir nuevo campo MARC';";
+$trans["biblioMarcListHdr"]        = "\$text = 'Información del campo MARC';";
+$trans["biblioMarcListTbleCol1"]   = "\$text = 'Función';";
+$trans["biblioMarcListTbleCol2"]   = "\$text = 'Etiqueta';";
+$trans["biblioMarcListTbleCol3"]   = "\$text = 'Descripción de la etiqueta';";
+$trans["biblioMarcListTbleCol4"]   = "\$text = 'Ind 1';";
+$trans["biblioMarcListTbleCol5"]   = "\$text = 'Ind 2';";
+$trans["biblioMarcListTbleCol6"]   = "\$text = 'Subcampo';";
+$trans["biblioMarcListTbleCol7"]   = "\$text = 'Descripción del subcampo';";
+$trans["biblioMarcListTbleCol8"]   = "\$text = 'Datos del campo';";
+$trans["biblioMarcListNoRows"]     = "\$text = 'No se encontraron campos MARC.';";
+$trans["biblioMarcListEdit"]       = "\$text = 'Editar';";
+$trans["biblioMarcListDel"]        = "\$text = 'Eliminar';";
+#****************************************************************************
+#*  Translation text for page usmarc_select.php
+#****************************************************************************
+$trans["usmarcSelectHdr"]          = "\$text = 'Selector de campos MARC';";
+$trans["usmarcSelectInst"]         = "\$text = 'Seleccione un tipo de campo';";
+$trans["usmarcSelectNoTags"]       = "\$text = 'No se encontraron etiquetas.';";
+$trans["usmarcSelectUse"]          = "\$text = 'Uso';";
+$trans["usmarcCloseWindow"]        = "\$text = 'Cerrar Ventana';";
+
+#****************************************************************************
+#*  Translation text for page biblio_marc_new_form.php
+#****************************************************************************
+$trans["biblioMarcNewFormHdr"]     = "\$text = 'Añadir nuevo campo MARC';";
+$trans["biblioMarcNewFormTag"]     = "\$text = 'Etiqueta';";
+$trans["biblioMarcNewFormSubfld"]  = "\$text = 'Subcampo';";
+$trans["biblioMarcNewFormData"]    = "\$text = 'Datos del campo';";
+$trans["biblioMarcNewFormInd1"]    = "\$text = 'Indicador 1';";
+$trans["biblioMarcNewFormInd2"]    = "\$text = 'Indicador 2';";
+$trans["biblioMarcNewFormSelect"]  = "\$text = 'Seleccionar';";
+
+#****************************************************************************
+#*  Translation text for page biblio_marc_new.php
+#****************************************************************************
+$trans["biblioMarcNewSuccess"]     = "\$text = 'Campo MARC añadido correctamente.';";
+
+#****************************************************************************
+#*  Translation text for page biblio_marc_edit_form.php
+#****************************************************************************
+$trans["biblioMarcEditFormHdr"]    = "\$text = 'Editar campo MARC';";
+
+#****************************************************************************
+#*  Translation text for page biblio_marc_edit.php
+#****************************************************************************
+$trans["biblioMarcEditSuccess"]    = "\$text = 'Campo MARC actualizado correctamente.';";
+
+#****************************************************************************
+#*  Translation text for page biblio_marc_del_confirm.php
+#****************************************************************************
+$trans["biblioMarcDelConfirmMsg"]  = "\$text = 'Estás seguro de que quieres borrar el campo con etiqueta %tag% y el subcampo %subfieldCd%?';";
+
+#****************************************************************************
+#*  Translation text for page biblio_marc_del.php
+#****************************************************************************
+$trans["biblioMarcDelSuccess"]     = "\$text = 'Campo MARC borrado correctamente.';";
+
+#****************************************************************************
+#*  Translation text for page biblio_del_confirm.php
+#****************************************************************************
+$trans["biblioDelConfirmWarn"]     = "\$text = 'Esta bibliografía tiene %copyCount% copia(s) y %holdCount% solicitudes de préstamo. Por favor borre estas copias y/o peticiones de uso antes de borrar esta bibliografía.';";
+$trans["biblioDelConfirmReturn"]   = "\$text = 'Volver a la información bibliográfica';";
+$trans["biblioDelConfirmMsg"]      = "\$text = 'Estás seguro de que quieres borrar la bibliografía titulada %title%?';";
+
+#****************************************************************************
+#*  Translation text for page biblio_del_confirm.php
+#****************************************************************************
+$trans["biblioDelMsg"]             = "\$text = 'La bibliografía (Copia), %title%, ha sido borrada.';";
+$trans["biblioDelReturn"]          = "\$text = 'Volver a la búsqueda bibliográfica';";
+
+#****************************************************************************
+#*  Translation text for page biblio_hold_list.php
+#****************************************************************************
+$trans["biblioHoldListHead"]       = "\$text = 'Solicitudes de Reserva de la bibliografía:';";
+$trans["biblioHoldListNoHolds"]    = "\$text = 'Actualmente no hay ejemplares en Reserva.';";
+$trans["biblioHoldListHdr1"]       = "\$text = 'Función';";
+$trans["biblioHoldListHdr2"]       = "\$text = 'Copia';";
+$trans["biblioHoldListHdr3"]       = "\$text = 'Reservado';";
+$trans["biblioHoldListHdr4"]       = "\$text = 'Usuario';";
+$trans["biblioHoldListHdr5"]       = "\$text = 'Estado';";
+$trans["biblioHoldListHdr6"]       = "\$text = 'Fecha de devolución';";
+$trans["biblioHoldListdel"]        = "\$text = 'Del';";
+
+#****************************************************************************
+#*  Translation text for page noauth.php
+#****************************************************************************
+$trans["NotAuth"]                 = "\$text = 'No tienes permiso de catalogación';";
+
+#****************************************************************************
+#*  Translation text for page upload_usmarc.php and upload_usmarc_form.php
+#****************************************************************************
+$trans["MarcUploadTest"]            = "\$text = 'Test de importación';";
+$trans["MarcUploadTestTrue"]        = "\$text = 'Verdadero';";
+$trans["MarcUploadTestFalse"]       = "\$text = 'Falso';";
+$trans["MarcUploadTestFileUpload"]  = "\$text = 'Entrada de archivo USMarc';";
+$trans["MarcUploadRecordsUploaded"] = "\$text = 'Documentos transferidos';";
+$trans["MarcUploadMarcRecord"]      = "\$text = 'Documento MARC';";
+$trans["MarcUploadTag"]             = "\$text = 'Etiqueta';";
+$trans["MarcUploadSubfield"]        = "\$text = 'Sub';";
+$trans["MarcUploadData"]            = "\$text = 'Datos';";
+$trans["MarcUploadRawData"]         = "\$text = 'Datos en bruto:';";
+$trans["UploadFile"]                = "\$text = 'Archivo Almacenado';";
+
+
+#****************************************************************************
+#*  Translation text for page usmarc_select.php
+#****************************************************************************
+$trans["PoweredByOB"]                 = "\$text = 'EspaBiblio';";
+$trans["Copyright"]                   = "\$text = 'Copyright &copy; 2005';";
+$trans["underthe"]                    = "\$text = 'bajo';";
+$trans["GNU"]                 = "\$text = 'GNU General Public License';";
+
+$trans["catalogResults"]                 = "\$text = 'Resultados de búsqueda';";
+
+#****************************************************************************
+  #* Translation text for Library of Congress SRU module
+  #****************************************************************************
+  $trans['locsru_Instructions']               = "\$text = 'Consulte datos ingresando Titulo, Autor o ISBN';";
+  $trans['locsru_detalle']               = "\$text = 'Permite al usuario recuperar la información de la Biblioteca del Congreso utilizando SRU (Search Retrival URL), que devuelve un formulario XML.';";
+  $trans['locsru_Search']                     = "\$text = 'Buscar en Library of Congress';";
+  $trans['locsru_Title']                      = "\$text = 'Titulo';";
+  $trans['locsru_Author']                     = "\$text = 'Autor';";
+  $trans['locsru_ISBN']                       = "\$text = 'ISBN';";
+  $trans['locsru_Publication']                = "\$text = 'Publicación';";
+  $trans['locsru_Publisher']                  = "\$text = 'Editorial';";
+  $trans['locsru_PublicationDate']            = "\$text = 'Fecha de Publicación';";
+  $trans['locsru_UseThis']                    = "\$text = 'Utilizar';";
+  
+  $trans['Search']                            = "\$text = 'Buscar';";
+
+?>

@@ -1,0 +1,5 @@
+<?php
+  //header("Location: home/index.php");
+  require_once("shared/common.php");
+?>
+<a href="javascript:popSecondary('home/index.php')">inicio</a>

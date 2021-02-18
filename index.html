@@ -1,0 +1,76 @@
+<html>
+  <head>
+<title>
+       Entrada principal al Sistema Digital de Alquileres del Banco de Libros de SERBILUZ
+</title>
+
+
+<script language="Javascript">
+<!-- Begin               Elimina el menu del boton derecho
+document.oncontextmenu = function(){return false}
+// End -->
+</script>
+
+
+
+<SCRIPT LANGUAGE="Javascript">
+    browser = (((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) >= 3 )) || ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4 )))
+    if(browser)
+    {
+	var appWindow;
+    }
+    function loadApp() 
+    {
+       var rootPage = "index2.php";
+       var attrWin = "resizable=yes,menubar=no,location=no,toolbar=no," + 
+                     "status=no,scrollbars=yes,directories=no,width=900,height=800";
+       if(browser)
+       {
+         appWindow = open(rootPage, 'appWindow', attrWin);
+       }
+       else 
+       {
+        open(rootPage, '', attrWin);
+       }
+}
+</SCRIPT>
+</head>
+
+
+
+<body bgproperties="fixed" background="images/fondo1x.jpg">
+
+</body>
+
+<center>
+      &nbsp;<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+           <tr>
+             <td width="38%">
+             	<img src=images/logoserbi.gif border=0 width="180" height="111" align="right"></td>
+             <td width="62%">
+             <p align="center">
+            <b>
+         <font face="Arial" size="2" color="#003366">
+            Bienvenido al Sistema Digital de Alquileres del Banco de Libros 
+            <br>
+            de SERBILUZ </font>
+         <font face="Arial" size="5" color="#003366">
+            <br>
+            (*******) 
+            <br>
+             </font>
+         
+                    
+            </b></td></tr></table>
+         <hr>
+         <p>
+         <font face="Arial" size="5" color="#003366">
+            &nbsp;<font face="Arial" size="3" color="#003366">Solo para el Ingreso de Usuario Registrados
+         </font></p>
+
+<form><input type="button" value="Iniciar" onclick="loadApp()" ></form>
+<br><br><br>
+<font face="Arial" size="3">
+"Copyright SERBILUZ-Teleinform&aacute;tica 2009" </p></center>
+</body>
+</html>
